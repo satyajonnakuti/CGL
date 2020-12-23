@@ -18,6 +18,8 @@ public class Cell {
 	}
 	public boolean isAlive()
 	{
-		
+		/*
+		 * This method is used to find if the current cell is alive or not?
+		 */
 	}
 }
