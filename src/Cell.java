@@ -16,10 +16,5 @@ public class Cell {
 		this.row=row;
 		this.column=column;
 	}
-	public boolean isAlive()
-	{
-		/*
-		 * This method is used to find if the current cell is alive or not?
-		 */
-	}
+	
 }

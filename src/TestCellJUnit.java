@@ -3,7 +3,7 @@
  */
 import org.junit.jupiter.api.Assertions;
 /**
- * 
+ * @author Satya
  *
  */
 public class TestCellJunit {
@@ -12,7 +12,7 @@ public class TestCellJunit {
 	{
 		Cell c=new Cell(2,3);
 		System.out.println("Checking the first alive cell");
-		Assertion.assertEquals(true,c.isAlive());
+		Assertion.assertEquals("true",c.isAlive());
 	}
 
 }

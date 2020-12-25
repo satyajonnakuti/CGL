@@ -3,50 +3,145 @@
  */
 
 /**
- *@author satya
+ * @author Satya
  *
  */
 public class Board {
 	
-	/* This is array of cells that are alive
+	/** Creating an array of live cells on the board
 	 * 
 	 */
 	public Cell [] cells;
-	/* These are the 2d dimensional board we want to create
+	/** Dimensions of the board
 	 * 
 	 */
 	public int dimensions;
-	/** It will return the number of live cells around the 
-	 * particular cell.
+	/**creating the  board with the given dimensions parameter
+	 * it is a boolean board,where true represents live cells
+	 * and false represents dead cells
+	 */
+	public boolean[][] board;
+	
+	/**This method will print the board
+	 * where . represents a dead cell
+	 * and * represents a live cell.
+	 */
+	public String toString()
+	{
+		String s="";
+		for(int i=0;i<this.dimensions;i++)
+		{
+			for(int j=0;j<this.dimensions;j++)
+		{
+			if(this.board[i][j])
+			{
+				s+="*";
+			}
+			else {
+				s+=".";
+			}
+		}s+="\n";
+		}return s.strip();
+	}
+	/** This is the constructor Board with size dimensions*dimensions 
+	 *and array of cells represensts the live cells in the board.
+	 *nextboard will take the 
+	 * 
 	 * 
 	 */
-	public toString()
-	{
-		/*
-		 * this method is used to print the array of cells as a string.
-		 */
-	}
-	public Board(Cell[] cells) {
+	public Board(Cell[] cells,int dimensions) {
 	this.cells=cells;	
+	this.dimensions=dimensions;
+	this.board=new boolean[dimensions][dimensions];
+	
 	} 
-	public int alivecount(Cell c)
+	/**
+	 * 
+	 * @param row
+	 * @param column
+	 * @return an integer
+	 */
+	public int aLiveCount(int row,int column) 
 	{
-		/*
-		 * This method is used to find the alive cells around a particular cell in the board.
-		 */
+		int count=0;
+		try
+		{
+		
+			for(int k=-1;k<=1;k++)
+				for(int j=-1;j<=1;j++)
+					if(k==0 &&j==0)
+					{}
+					else {
+					if(board[row+k][column+j])
+						count++;
+					}
+			
+		}catch(Exception e)
+		{
+			
+		}finally {return count;}
+	}
+	/**creating a board
+	 * 
+	 * 2,2   
+	 * 
+	 * 
+	 */
+	public void createBoard()
+	{
+		
+		for(int i=0;i<cells.length;i++)
+		{
+			board[cells[i].row][cells[i].column]=true;
+		}
 		
 	}
-	public void createBoard(Cell[] cell)
-	{
-		/*
-		 * This method is used to create a board by taking the input as array of cells with positions of the alive cells .
-		 */
-		
+	public void generateBoard() {
+		boolean[][] nextboard=new boolean[dimensions][dimensions];
+		liveCells(nextboard);
+		deadCells(nextboard);
+		board=nextboard;
+		//cells=nextcells;
 	}
-	public Cell[] generateBoard(Cell[] cell)
+	public void liveCells(boolean[][] nextboard)
+	{ 	
+		int count;
+		for(int i=0;i<this.cells.length;i++)
+		{
+			count=aLiveCount(cells[i].row,cells[i].column);
+			if(count<2 || count>3)
+				nextboard[cells[i].row][cells[i].column]=false;
+			if(count==2||count==3)
+				nextboard[cells[i].row][cells[i].column]=true;
+				//nextcells[count++]=new Cell([cells[i].row],[cells[i].column]);
+		}
+		}
+	public  void deadCells(boolean[][] nextboard)
 	{
-		/*
-		 * This method is used to create the next generation board by considering the alive cells in the create board. 
-		 */
+		try
+		{
+		for(int i=0;i<cells.length;i++)
+		for(int k=-1;k<=1;k++)
+			for(int j=-1;j<=1;j++)
+			{
+				int row=cells[i].row+k;
+				int column=cells[i].column+j;
+				if(board[row][column])
+				{
+					
+				}else
+				{
+					int count=aLiveCount(row,column);
+					if(count==3)
+						nextboard[row][column]=true;
+						//nextcells[count++]=new Cell[row][column];
+				}
+			}
+		}catch(Exception e)
+		{}finally {}
+		
+		
+	
+		
 	}
 }
