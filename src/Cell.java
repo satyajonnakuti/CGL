@@ -19,6 +19,8 @@ public class Cell {
 	/*This method return a boolean value 
 	 * if true indicates the cell is alive
 	 * if false indicated the cell is dead
+	 * @param row
+	 * @param column
 	 */
 	public Cell(int row,int column)
 	{

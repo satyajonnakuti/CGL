@@ -38,10 +38,8 @@ public class TestClass {
 	 * @param args
 	 */
 	
-	/*In main method ,the scanner class will take the input for the game 
-	 * 
-	 * 
-	 */
+	//In main method ,the scanner class will take the input for the game 
+
     public TestClass()
 	{
 		
@@ -55,21 +53,26 @@ public class TestClass {
 		 int dimension ;
 		 
 		
-		/*creating a current generation board by  creating an object
-		 * for the board
-		 * 
-		 * 
-		 */
-		 cells=new Cell[4];
-		 Scanner scan=new Scanner(System.in);
-		 cells[0]=new Cell(2,3);
-		 cells[1]=new Cell(3,3);
-		 cells[2]=new Cell(4,2);
-		 cells[3]=new Cell(3,5);
-		 dimension=6;
-		 b=new Board(cells,dimension);
-		 Game game=new Game(b);
-		 game.startGame();
+		//creating a current generation board by  creating an object for the board
+		 cells=new Cell[4];//we are initializing four live cells here
+		 
+		 Scanner scan=new Scanner(System.in);// we are giving live cells positions below
+		 
+		 cells[0]=new Cell(2,3);//first live cell position
+		 
+		 cells[1]=new Cell(3,3);//second live cell position
+		 
+		 cells[2]=new Cell(4,2);//third live cell position
+		 
+		 cells[3]=new Cell(3,5);//fourth live cell position
+		 
+		 dimension=6;// we are giving the dimensions of the board as 6x6
+		 
+		 b=new Board(cells,dimension);//we are creating a new board here
+		 
+		 Game game=new Game(b);//we are creating a new game here
+		 
+		 game.startGame();//we are starting the game here
 		
 		
 	}
