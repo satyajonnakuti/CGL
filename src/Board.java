@@ -1,8 +1,12 @@
 /**
- * 
+ * we did not define any packages in this project
  */
 
 /**
+ * 
+ * @author sujtha and @author satya discussed the functionality together. 
+ * @author srikar and @author santosh also helped us in few areas.
+ * @author LN Murthy garu also helped us in the logic and understanding.
  * @author Satya
  *
  */
@@ -26,6 +30,8 @@ public class Board {
 	 * where . represents a dead cell
 	 * and * represents a live cell.
 	 */
+	/****************************************************************************************************************************************************************/
+
 	public String toString()
 	{
 		String s="";
@@ -43,6 +49,8 @@ public class Board {
 		}s+="\n";
 		}return s.strip();
 	}
+	/****************************************************************************************************************************************************************/
+
 	/** This is the constructor Board with size dimensions*dimensions 
 	 *and array of cells represensts the live cells in the board.
 	 *nextboard will take the 
@@ -55,6 +63,8 @@ public class Board {
 	this.board=new boolean[dimensions][dimensions];
 	
 	} 
+	/****************************************************************************************************************************************************************/
+
 	/**
 	 * 
 	 * @param row
@@ -81,6 +91,8 @@ public class Board {
 			
 		}finally {return count;}
 	}
+	/****************************************************************************************************************************************************************/
+
 	/**creating a board
 	 * 
 	 * 2,2   
@@ -96,6 +108,8 @@ public class Board {
 		}
 		
 	}
+	/****************************************************************************************************************************************************************/
+
 	public void generateBoard() {
 		boolean[][] nextboard=new boolean[dimensions][dimensions];
 		liveCells(nextboard);
@@ -103,6 +117,8 @@ public class Board {
 		board=nextboard;
 		//cells=nextcells;
 	}
+	/****************************************************************************************************************************************************************/
+
 	public void liveCells(boolean[][] nextboard)
 	{ 	
 		int count;
@@ -116,6 +132,8 @@ public class Board {
 				//nextcells[count++]=new Cell([cells[i].row],[cells[i].column]);
 		}
 		}
+	/****************************************************************************************************************************************************************/
+
 	public  void deadCells(boolean[][] nextboard)
 	{
 		try

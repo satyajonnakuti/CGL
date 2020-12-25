@@ -30,7 +30,8 @@ public class TestBoardJUnit {
 		
 	
 	}
-	
+	/****************************************************************************************************************************************************************/
+
 	@Test
 	/*
 	 * Here we are checking the alive cell count in the board and passing array of cells as in put and checking for possible alive cells in the board.
@@ -47,6 +48,7 @@ public class TestBoardJUnit {
 		Assertions.assertEquals("2",b.alivecount(new Cell(4,4)));// checking with our output and comparing it.
 		
 	}
+	/****************************************************************************************************************************************************************/
 	@Test
 	/*
 	 * We are generating the next generation board and checking if the board is correct or not in this case.
@@ -66,7 +68,8 @@ public class TestBoardJUnit {
 		Assertions.assertEquals(".....\n.....\n.....\n..**.\n...**",s);// checking with our output and comparing it.
 		
 	}
-	
+	/****************************************************************************************************************************************************************/
+
 	
 
 }

@@ -1,5 +1,14 @@
-
-
+/**
+ * we did not define any packages in this project
+ */
+/**
+ * 
+ * @author sujtha and @author satya discussed the functionality together. 
+ * @author srikar and @author santosh also helped us in few areas.
+ * @author LN Murthy garu also helped us in the logic and understanding.
+ * @author Satya
+ *
+ */
 public class Cell {
 	/*This specifies the row and column of this particular cell in
 	 * the game board
@@ -16,5 +25,6 @@ public class Cell {
 		this.row=row;
 		this.column=column;
 	}
-	
+	/****************************************************************************************************************************************************************/
+
 }
