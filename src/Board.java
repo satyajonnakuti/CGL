@@ -10,6 +10,13 @@
  * @author Satya
  *
  */
+/***************************************************Board Class**************************************/
+/*
+ * we are creating this board class to create a board with few live cells and continue the next generations of the cells based on the current ststus of the cell.
+ * We are using aliveCount,createBoaed,generateBoard,live cells and deadCells methods in this class.
+ * This class helps us to build the boards with live and dead cells and generate next generation boards till all the cells reach to a level where no next generation can be created.
+ * 
+ */
 public class Board {
 	
 	/** Creating an array of live cells on the board
@@ -20,18 +27,19 @@ public class Board {
 	 * 
 	 */
 	public int dimensions;
+	
 	/**creating the  board with the given dimensions parameter
 	 * it is a boolean board,where true represents live cells
 	 * and false represents dead cells
 	 */
 	public boolean[][] board;
 	
+	
+	/****************************************************************************************************************************************************************/
 	/**This method will print the board
 	 * where . represents a dead cell
 	 * and * represents a live cell.
 	 */
-	/****************************************************************************************************************************************************************/
-
 	public String toString()
 	{
 		String s="";
@@ -51,11 +59,8 @@ public class Board {
 	}
 	/****************************************************************************************************************************************************************/
 
-	/** This is the constructor Board with size dimensions*dimensions 
-	 *and array of cells represensts the live cells in the board.
-	 *nextboard will take the 
-	 * 
-	 * 
+	/** This is the constructor Board with size dimensions*dimensions and array of cells represents the live cells in the board.
+	 *
 	 */
 	public Board(Cell[] cells,int dimensions) {
 	this.cells=cells;	
